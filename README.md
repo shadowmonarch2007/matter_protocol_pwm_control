@@ -289,4 +289,11 @@ idf.py erase-flash
 idf.py flash monitor
 ```
 
+<img width="799" height="602" alt="Screenshot from 2025-12-16 20-23-49" src="https://github.com/user-attachments/assets/78407819-ed0d-4844-84f0-56e31157f006" />
+
+
+
+
+
+
 
