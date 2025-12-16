@@ -1,0 +1,8 @@
+build/
+sdkconfig.old
+*.bin
+*.elf
+*.map
+*.log
+.DS_Store
+
