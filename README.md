@@ -1,36 +1,19 @@
-# ESP32-C6 Matter 3-Channel PWM Controller
+# ESP32-C6 Matter  PWM Controller
 
 [![ESP-IDF](https://img.shields.io/badge/ESP--IDF-v5.0-blue)](https://github.com/espressif/esp-idf)
 [![ESP-Matter](https://img.shields.io/badge/ESP--Matter-latest-green)](https://github.com/espressif/esp-matter)
 [![Platform](https://img.shields.io/badge/Platform-ESP32--C6-orange)](https://www.espressif.com/en/products/socs/esp32-c6)
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](LICENSE)
 
-> **A professional Matter-enabled 3-channel PWM controller built on ESP32-C6, enabling seamless smart home integration with Google Home and Apple Home. Control three independent dimmable lights with precise 8-bit PWM resolution and visual feedback via an onboard WS2812 RGB LED.**
+> **A professional Matter-enabled PWM controller built on ESP32-C6, enabling seamless smart home integration with Google Home and Apple Home. Control three independent dimmable lights with precise 8-bit PWM resolution .**
 
-## 📋 Description
+##  Description
 
 This project implements a Matter protocol smart device that provides three independent PWM-controlled dimmable lights. Each channel operates at 5kHz with 8-bit resolution (0-255), making it perfect for LED dimming applications. The device appears as three separate dimmable lights in your Matter ecosystem, allowing independent control of each channel through Google Home, Apple Home, or any Matter-compatible controller.
 
 Built on the ESP32-C6 with ESP-Matter SDK, this controller demonstrates professional-grade Matter device development with clean architecture and robust PWM control.
 
-## ✨ Features
 
-- **3 Independent PWM Channels**: GPIO 4, 5, and 6 - each controllable separately
-- **Matter Protocol Support**: Seamless integration with Google Home and Apple Home
-- **Individual Light Control**: Each channel appears as a distinct dimmable light
-- **Visual Status Feedback**: WS2812 RGB LED on GPIO 8 provides status indication
-- **High Resolution PWM**: 8-bit resolution (0-255) for smooth dimming
-- **Optimized Frequency**: 5kHz carrier frequency eliminates visible flicker
-- **Matter Commissioning**: QR code based setup for easy onboarding
-- **Production Ready**: Clean codebase with proper error handling
-
-## 🔧 Hardware Requirements
-
-### Required Components
-- **ESP32-C6-DevKitC-1** (or compatible ESP32-C6 board)
-- **USB Cable** (for programming and power)
-- **LEDs or LED strips** (for PWM outputs)
-- **WS2812B RGB LED** (optional, for status indication)
 
 ### Pin Configuration
 
@@ -41,7 +24,7 @@ Built on the ESP32-C6 with ESP-Matter SDK, this controller demonstrates professi
 | PWM Channel 2 | 6 | Dimmable Light 3 | 5kHz, 8-bit PWM |
 | RGB Status LED | 8 | WS2812 Indicator | Optional |
 
-## 📦 Prerequisites
+## Prerequisites
 
 ### Software Requirements
 
@@ -199,7 +182,7 @@ QR Code: MT:XXXXXXXXXXXXXXXXXX
 - Slider for brightness (0-100%)
 - Changes reflect in real-time
 
-## 📊 Monitoring and Debugging
+##  Monitoring and Debugging
 
 ### View Serial Output
 
@@ -225,7 +208,7 @@ Press `Ctrl+]` to exit the monitor.
 idf.py -p /dev/ttyUSB0 erase-flash
 ```
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 pwm_matter/
@@ -243,7 +226,7 @@ pwm_matter/
 └── README.md                  - This file
 ```
 
-## 🔍 Technical Specifications
+##  Technical Specifications
 
 | Specification | Value |
 |--------------|-------|
@@ -260,7 +243,7 @@ pwm_matter/
 | **Commissioning** | BLE + WiFi |
 | **Matter Device Type** | Dimmable Light (x3) |
 
-## 📚 Dependencies
+##  Dependencies
 
 This project uses the following components:
 
@@ -300,7 +283,7 @@ Edit `app_driver.h`:
 
 Then update the arrays in `app_driver.cpp` and loop in `app_main.cpp`.
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Build Fails
 ```bash
@@ -330,23 +313,6 @@ idf.py -p /dev/ttyACM0 flash
 idf.py erase-flash
 idf.py flash monitor
 ```
+<img width="799" height="602" alt="Screenshot from 2025-12-16 20-24-06" src="https://github.com/user-attachments/assets/1c36eb3f-1353-41fa-bb32-a3d99ab2a75c" />
 
-## 📄 License
 
-Apache License 2.0
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📧 Support
-
-For issues and questions:
-- Open an issue on GitHub
-- Check ESP-Matter documentation: https://docs.espressif.com/projects/esp-matter/
-
-## 🌟 Acknowledgments
-
-- Built with [ESP-IDF](https://github.com/espressif/esp-idf)
-- Powered by [ESP-Matter](https://github.com/espressif/esp-matter)
-- Matter protocol by [CSA](https://csa-iot.org/all-solutions/matter/)
