@@ -255,7 +255,7 @@ This project uses the following components:
 - **WiFi** - Network connectivity
 - **BLE** - Commissioning
 
-## 🛠️ Customization
+##  Customization
 
 ### Change PWM Frequency
 
